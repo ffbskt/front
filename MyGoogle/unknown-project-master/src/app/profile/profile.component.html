@@ -1,0 +1,17 @@
+<div class="me">
+  <div class="my-photo"><img src="{{ me.photo }}" alt=""></div>
+  <p class="my-name">{{ me.name }}</p></div>
+<hr>
+<h2>Мои группы</h2>
+<section class="groups">
+  <div class="my-group" *ngFor="let group of myGroups; let i = index">
+    <b>{{ i + 1 }}.</b>
+    <a class="group-name" [routerLink]="['/group', group.group_url]">{{ group.group_name }}</a>
+    <div class="stats"><p><b>Rating</b></p>
+      <p>{{ group.group_rate }}</p></div>
+    <div class="stats" *ngFor="let stat of group.st_name; let i = index">
+      <p><b>{{ stat | capitalize}}</b></p>
+      <p>{{ group.st_def[i] }}</p>
+    </div>
+  </div>
+</section>

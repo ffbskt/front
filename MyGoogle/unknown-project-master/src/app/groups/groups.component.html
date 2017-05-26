@@ -1,0 +1,16 @@
+<div class="all-groups">
+<a class="group" *ngFor="let group of groups" [routerLink]="['/group', group.url]">
+  <div class="images"
+       style="background: url(/assets/group_icons/devault_group_avatar.jpg) no-repeat center;
+              background-size: cover;">
+    <a class="author-avatar"
+       style="background: url(/assets/group_icons/user.svg) no-repeat center;
+              background-size: cover;"></a>
+  </div>
+  <div class="group-info">
+    <p class="group-name">{{ group.groups_name }}</p>
+    <p class="group-people">{{ group.people }}</p>
+    <p class="group-rating">{{ group.rate_group }}</p>
+  </div>
+</a>
+</div>

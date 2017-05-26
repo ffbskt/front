@@ -1,0 +1,15 @@
+<header>
+  <a routerLink="/" class="title" aria-label="Title">GraphOfGroups</a>
+  <app-search-box></app-search-box>
+  <nav>
+    <ul>
+      <li><a routerLink="/groups" routerLinkActive="active">Группы</a></li>
+      <li><a routerLink="/profile" routerLinkActive="active">Профиль</a></li>
+      <li>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#" (click)="signOut();">Sign out</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
